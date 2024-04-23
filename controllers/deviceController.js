@@ -79,7 +79,7 @@ class DeviceController {
         });
         return res.json(deletedDevice)
     }
-    async changeRating(req, res) {
+    async updateRating(req, res) {
         let {id, rating} = req.body;
             
             const updatedRating = await Device.update(

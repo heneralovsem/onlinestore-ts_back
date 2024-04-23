@@ -38,6 +38,13 @@ class ReviewController {
         
         
     }
+    // async getDeviceRatings (req, res) {
+    //     const {deviceId} = req.query
+    //     let ratings = await Review.findAll({
+    //         where: {deviceId}
+    //     })
+    //     return res.json(ratings)
+    // }
     async deleteReview(req, res) {
         const {id} = req.params;
 
