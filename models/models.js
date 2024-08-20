@@ -31,7 +31,6 @@ const Order = sequelize.define('order', {
     userPhone: {type: DataTypes.STRING, allowNull: false},
     userEmail: {type: DataTypes.STRING, allowNull: false},
     totalPrice: {type: DataTypes.INTEGER, allowNull: false},
-    // devices: {type: Array(DataTypes.INTEGER), allowNull: false}
 })
 const OrderedDevice = sequelize.define('orderedDevice', {
     id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement:true},

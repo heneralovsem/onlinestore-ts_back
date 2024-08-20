@@ -1,6 +1,6 @@
 const ApiError = require('../error/ApiError')
 const { Order, OrderedDevice } = require('../models/models')
-class TypeController {
+class OrderController {
     async createOrder (req, res) {
         const {userName, userPhone, userEmail, totalPrice, devices, userId} = req.body
         const order = await Order.create({userName, userPhone, userEmail, totalPrice, devices, userId})
@@ -25,15 +25,15 @@ class TypeController {
         )
         return res.json(orders)
     }
-    async deleteType(req, res) {
+    async deleteOrder(req, res) {
         const {id} = req.params;
 
-        const deletedType = await Order.destroy({
+        const deletedOrder = await Order.destroy({
             where: {id},
         });
-        return res.json(deletedType)
+        return res.json(deletedOrder)
     }
 
 }
 
-module.exports = new TypeController()
+module.exports = new OrderController()
