@@ -19,6 +19,7 @@ class OrderController {
         const orders = await Order.findAll(
             {
                 where:{userId},
+                order: [['id', 'desc']],
                 include: [{model: OrderedDevice, as: 'devices'}]
                 
             }
